@@ -14,6 +14,7 @@
   width: 100%;
   height: auto;
   background-color: transparent;
+  transition: background-color var(--transition-base);
 }
 
 .header--hero > .container {
@@ -92,7 +93,7 @@
 
   .header--hero .header__mobile-nav {
     top: var(--header-height);
-    height: calc(100vh - var(--header-height));
+    height: var(--mobile-nav-height);
   }
 }
 
@@ -461,6 +462,10 @@
   .hero .header.header--hero {
     position: absolute;
     background-color: transparent;
+  }
+
+  .hero .header.header--hero.is-menu-open {
+    background-color: var(--color-neutral-900);
   }
 
   .hero {
