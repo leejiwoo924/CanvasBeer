@@ -1,0 +1,220 @@
+/* ==========================================================================
+   Brand Page CSS
+   BEM Naming Convention | 1rem = 16px
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Brand Hero Section — About hero와 동일 (100vh, cover)
+   -------------------------------------------------------------------------- */
+.brand-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.brand-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('../images/brand/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.brand-hero__container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.brand-hero__title {
+  color: var(--color-neutral-50);
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   A Story Behind Section
+   -------------------------------------------------------------------------- */
+.brand-story {
+  padding-block: 7.5rem; /* 120px */
+  background-color: var(--color-neutral-900);
+  color: var(--color-neutral-50);
+}
+
+.brand-story__grid {
+  align-items: center;
+}
+
+.brand-story__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.brand-story__content {
+  text-align: right;
+}
+
+.brand-story__title {
+  color: var(--color-neutral-50);
+}
+
+.brand-story__desc {
+  margin-top: 2.5rem; /* 40px */
+  color: var(--color-neutral-50);
+}
+
+.brand-story__desc p {
+  margin: 0;
+}
+
+.brand-story__desc p + p {
+  margin-top: var(--spacing-md); /* 24px */
+}
+
+@media screen and (max-width: 64rem) {
+  .brand-story.section {
+    padding-block: 6.25rem; /* 100px */
+  }
+
+  .brand-story__container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin-inline: auto;
+    padding-inline: var(--container-margin-inline);
+  }
+
+  .brand-story__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--grid-gap);
+    align-items: center;
+    width: 100%;
+  }
+
+  .brand-story__media,
+  .brand-story__content {
+    grid-column: auto;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .brand-story__img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .brand-story__content {
+    margin-top: 0;
+    text-align: right;
+  }
+
+  .brand-story__desc {
+    margin-top: 1.875rem; /* 30px — title ↔ body */
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Our Philosophy Section
+   -------------------------------------------------------------------------- */
+.brand-philosophy {
+  padding-block: 7.5rem; /* 120px */
+  background-color: var(--color-neutral-900);
+  color: var(--color-neutral-50);
+}
+
+.brand-philosophy__title {
+  margin-bottom: 4rem; /* 64px */
+  color: var(--color-neutral-50);
+}
+
+.brand-philosophy__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.brand-philosophy__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+.brand-philosophy__media {
+  min-width: 0;
+}
+
+.brand-philosophy__img {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.brand-philosophy__panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 26.875rem; /* 430px */
+  padding: var(--spacing-2xl);
+  background-color: var(--color-primary-400);
+}
+
+.brand-philosophy__panel-inner {
+  flex-shrink: 0;
+  color: var(--color-neutral-900);
+}
+
+.brand-philosophy__panel--left .brand-philosophy__panel-inner {
+  text-align: left;
+}
+
+.brand-philosophy__panel--right .brand-philosophy__panel-inner {
+  text-align: right;
+}
+
+.brand-philosophy__keyword {
+  color: var(--color-neutral-900);
+}
+
+.brand-philosophy__subtitle {
+  margin-top: 2.5rem; /* 40px — keyword ↔ subtitle */
+  color: var(--color-neutral-900);
+}
+
+.brand-philosophy__desc {
+  margin-top: 0.9375rem; /* 15px — subtitle ↔ body */
+  color: var(--color-neutral-900);
+  word-break: keep-all;
+}
+
+.brand-philosophy__desc-line {
+  display: block;
+}
+
+@media screen and (max-width: 64rem) {
+  .brand-philosophy.section {
+    padding-top: 0;
+    padding-bottom: 1.875rem; /* 30px — footer 간격 */
+  }
+
+  .brand-philosophy__panel {
+    padding: 5.625rem 7.5rem; /* 90px 120px — vertical / horizontal */
+  }
+
+  .brand-philosophy__subtitle {
+    margin-top: 1.5625rem; /* 25px — title ↔ subtitle */
+  }
+
+  .brand-philosophy__desc {
+    margin-top: 0.625rem; /* 10px — subtitle ↔ body */
+  }
+}

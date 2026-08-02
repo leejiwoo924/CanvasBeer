@@ -1,0 +1,497 @@
+/* ==========================================================================
+   Typography — Design System
+   Prata: Title, Heading, Card | Pretendard: Body, Caption, Footer
+   1rem = 16px
+   ========================================================================== */
+
+:root {
+  /* Line Height */
+  --typo-title-line-height: 1.2;
+  --typo-heading-line-height: 1.25;
+  --typo-body-line-height: 1.7;
+  --typo-caption-line-height: 1.5;
+
+  /* Title — Prata (responsive: Title01) */
+  --typo-title-01-size: 5rem;       /* 80px — Desktop */
+  --typo-title-02-size: 4rem;       /* 64px */
+  --typo-title-03-size: 3.125rem;  /* 50px */
+
+  /* Heading — Prata */
+  --typo-h1-size: 4rem;       /* H1 — 64px */
+  --typo-h2-size: 3.75rem;    /* H2 — 60px */
+  --typo-h3-size: 3rem;       /* H3 — 48px */
+  --typo-h4-size: 1.5rem;     /* H4 — 24px */
+  --typo-h5-size: 1.25rem;    /* H5 — 20px */
+  --typo-h6-size: 1rem;       /* H6 — 16px */
+
+  /* Body — Pretendard */
+  --typo-body-01-size: 3.75rem;    /* Body01 — 60px Bold */
+  --typo-body-02-size: 2.5rem;     /* Body02 — 40px Bold */
+  --typo-body-03-size: 1.875rem;   /* Body03 — 30px Bold */
+  --typo-body-04-size: 2.25rem;    /* Body04 — 36px Regular */
+  --typo-body-05-size: 1.5rem;     /* Body05 — 24px Medium */
+  --typo-body-06-size: 2rem;       /* Body06 — 32px Regular */
+  --typo-body-07-size: 1.5rem;     /* Body07 — 24px Light */
+  --typo-body-08-size: 1.125rem;   /* Body08 — 18px Light */
+  --typo-body-09-size: 1.25rem;    /* Body09 — 20px Regular */
+  --typo-body-10-size: 2rem;       /* Body10 — 32px Light */
+  --typo-body-11-size: 0.75rem;    /* Body11 — 12px Light */
+  --typo-body-12-size: 1.875rem;   /* Body12 — 30px Prata */
+
+  /* Caption — Pretendard */
+  --typo-caption-01-size: 1.75rem; /* Caption01 — 28px Light */
+  --typo-caption-02-size: 1.5rem;   /* Caption02 — 24px Regular */
+  --typo-caption-03-size: 1rem;     /* Caption03 — 16px Regular */
+  --typo-caption-04-size: 1.125rem; /* Caption04 — 18px Regular */
+  --typo-caption-05-size: 2.5rem;   /* Caption05 — 40px Light */
+  --typo-caption-06-size: 0.9375rem; /* Caption06 — 15px Light */
+
+  /* Footer — Pretendard */
+  --typo-footer-01-size: 1.25rem;   /* Footer01 — 20px Light */
+
+  /* Card — Prata */
+  --typo-card-01-size: 2rem; /* Card01 — 32px */
+  --typo-card-02-size: 0.875rem; /* Card02 — 14px */
+
+  /* Email — Pretendard */
+  --typo-email-01-size: 0.75rem; /* Email01 — 12px Light */
+}
+
+/* --------------------------------------------------------------------------
+   Title — Prata
+   -------------------------------------------------------------------------- */
+.typo--title-01 {
+  font-family: var(--font-display);
+  font-size: var(--typo-title-01-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-title-line-height);
+}
+
+.typo--title-02 {
+  font-family: var(--font-display);
+  font-size: var(--typo-title-02-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-title-line-height);
+}
+
+.typo--title-03 {
+  font-family: var(--font-display);
+  font-size: var(--typo-title-03-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-title-line-height);
+}
+
+/* --------------------------------------------------------------------------
+   Heading — Prata
+   H1 64 | H2 60 | H3 48 | H4 24 | H5 20
+   -------------------------------------------------------------------------- */
+.typo--h1 {
+  /* H1 — Prata 64 */
+  font-family: var(--font-display);
+  font-size: var(--typo-h1-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-heading-line-height);
+}
+
+.typo--h2 {
+  /* H2 — Prata 60 */
+  font-family: var(--font-display);
+  font-size: var(--typo-h2-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-heading-line-height);
+}
+
+.typo--h3 {
+  /* H3 — Prata 48 */
+  font-family: var(--font-display);
+  font-size: var(--typo-h3-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-heading-line-height);
+}
+
+.typo--h4 {
+  /* H4 — Prata 24 */
+  font-family: var(--font-display);
+  font-size: var(--typo-h4-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-heading-line-height);
+}
+
+.typo--h5 {
+  /* H5 — Prata 20 */
+  font-family: var(--font-display);
+  font-size: var(--typo-h5-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-heading-line-height);
+}
+
+.typo--h6 {
+  /* H6 — Prata 16 */
+  font-family: var(--font-display);
+  font-size: var(--typo-h6-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-heading-line-height);
+}
+
+/* --------------------------------------------------------------------------
+   Body — Pretendard
+   Body01 Bold 60 | Body02 Bold 40 | Body03 Bold 30
+   Body04 Medium 36 | Body05 Medium 24 | Body06 Regular 32
+   Body07 Light 24 | Body08 Light 18 | Body09 Regular 20 | Body10 Light 32
+   -------------------------------------------------------------------------- */
+.typo--body-01 {
+  /* Body01 — Pretendard Bold 60 */
+  font-family: var(--font-body);
+  font-size: var(--typo-body-01-size);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--typo-body-line-height);
+}
+
+.typo--body-02 {
+  /* Body02 — Pretendard Bold 40 */
+  font-family: var(--font-body);
+  font-size: var(--typo-body-02-size);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--typo-body-line-height);
+}
+
+.typo--body-03 {
+  /* Body03 — Pretendard Bold 30 */
+  font-family: var(--font-body);
+  font-size: var(--typo-body-03-size);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--typo-body-line-height);
+}
+
+.typo--body-04 {
+  /* Body04 — Pretendard Regular 36 */
+  font-family: var(--font-body);
+  font-size: var(--typo-body-04-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-body-line-height);
+}
+
+.typo--body-05 {
+  /* Body05 — Pretendard Medium 24 */
+  font-family: var(--font-body);
+  font-size: var(--typo-body-05-size);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--typo-body-line-height);
+}
+
+.typo--body-06 {
+  /* Body06 — Pretendard Regular 32 */
+  font-family: var(--font-body);
+  font-size: var(--typo-body-06-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-body-line-height);
+}
+
+.typo--body-07 {
+  /* Body07 — Pretendard Light 24 */
+  font-family: var(--font-body);
+  font-size: var(--typo-body-07-size);
+  font-weight: var(--font-weight-light);
+  line-height: var(--typo-body-line-height);
+}
+
+.typo--body-08 {
+  /* Body08 — Pretendard Light 18 */
+  font-family: var(--font-body);
+  font-size: var(--typo-body-08-size);
+  font-weight: var(--font-weight-light);
+  line-height: var(--typo-body-line-height);
+}
+
+.typo--body-09 {
+  /* Body09 — Pretendard Regular 20 */
+  font-family: var(--font-body);
+  font-size: var(--typo-body-09-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-body-line-height);
+}
+
+.typo--body-10 {
+  /* Body10 — Pretendard Light 32 */
+  font-family: var(--font-body);
+  font-size: var(--typo-body-10-size);
+  font-weight: var(--font-weight-light);
+  line-height: var(--typo-body-line-height);
+}
+
+.typo--body-11 {
+  /* Body11 — Pretendard Light 12 */
+  font-family: var(--font-body);
+  font-size: var(--typo-body-11-size);
+  font-weight: var(--font-weight-light);
+  line-height: var(--typo-body-line-height);
+}
+
+.typo--body-12 {
+  /* Body12 — Prata 30 */
+  font-family: var(--font-display);
+  font-size: var(--typo-body-12-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-heading-line-height);
+}
+
+/* --------------------------------------------------------------------------
+   Card — Prata
+   Card01 32 | Card02 14
+   -------------------------------------------------------------------------- */
+.typo--card-01 {
+  /* Card01 — Prata 32 */
+  font-family: var(--font-display);
+  font-size: var(--typo-card-01-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-title-line-height);
+}
+
+.typo--card-02 {
+  /* Card02 — Prata 14 */
+  font-family: var(--font-display);
+  font-size: var(--typo-card-02-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-title-line-height);
+}
+
+/* --------------------------------------------------------------------------
+   Caption — Pretendard
+   Caption01 Light 28 | Caption02 Regular 24 | Caption03 Regular 16 | Caption04 Regular 18 | Caption05 Light 40 | Caption06 Light 15
+   -------------------------------------------------------------------------- */
+.typo--caption-01 {
+  /* Caption01 — Pretendard Light 28 */
+  font-family: var(--font-body);
+  font-size: var(--typo-caption-01-size);
+  font-weight: var(--font-weight-light);
+  line-height: var(--typo-caption-line-height);
+}
+
+.typo--caption-02 {
+  /* Caption02 — Pretendard Regular 24 */
+  font-family: var(--font-body);
+  font-size: var(--typo-caption-02-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-caption-line-height);
+}
+
+.typo--caption-03 {
+  /* Caption03 — Pretendard Regular 16 */
+  font-family: var(--font-body);
+  font-size: var(--typo-caption-03-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-caption-line-height);
+}
+
+.typo--caption-04 {
+  /* Caption04 — Pretendard Regular 18 */
+  font-family: var(--font-body);
+  font-size: var(--typo-caption-04-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--typo-caption-line-height);
+}
+
+.typo--caption-05 {
+  /* Caption05 — Pretendard Light 40 */
+  font-family: var(--font-body);
+  font-size: var(--typo-caption-05-size);
+  font-weight: var(--font-weight-light);
+  line-height: var(--typo-caption-line-height);
+}
+
+.typo--caption-06 {
+  /* Caption06 — Pretendard Light 15 */
+  font-family: var(--font-body);
+  font-size: var(--typo-caption-06-size);
+  font-weight: var(--font-weight-light);
+  line-height: var(--typo-caption-line-height);
+}
+
+/* --------------------------------------------------------------------------
+   Footer — Pretendard
+   Footer01 Light 20
+   -------------------------------------------------------------------------- */
+.typo--footer-01 {
+  /* Footer01 — Pretendard Light 20 */
+  font-family: var(--font-body);
+  font-size: var(--typo-footer-01-size);
+  font-weight: var(--font-weight-light);
+  line-height: var(--typo-caption-line-height);
+}
+
+.typo--email-01 {
+  /* Email01 — Pretendard Light 12 */
+  font-family: var(--font-body);
+  font-size: var(--typo-email-01-size);
+  font-weight: var(--font-weight-light);
+  line-height: var(--typo-caption-line-height);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive — Tablet (~1024px)
+   Title01 60 | Title02 40 | H1 60 | H2 32 | H3 20 | H5 24
+   Body01 Bold 30 | Body02 Bold 24 | Body03 Medium 24 | Body04 Medium 16
+   Body05 Regular 40 | Body06 Regular 20 | Body07 Light 32 | Body08 Light 20 | Body09 Light 18 | Body10 Prata 15
+   Card01 24 | Caption01 Regular 24 | Caption02 Regular 18 | Caption03 Regular 16
+   Caption04 Regular 15 | Caption05 Light 14 | Caption06 Light 15 | Footer01 Light 16
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 64rem) {
+  :root {
+    /* Title — Prata */
+    --typo-title-01-size: 3.75rem;   /* 60px */
+    --typo-title-02-size: 2.5rem;    /* 40px */
+
+    /* Heading — Prata */
+    --typo-h1-size: 3.75rem;          /* 60px */
+    --typo-h2-size: 2rem;             /* 32px */
+    --typo-h3-size: 1.25rem;          /* 20px */
+    --typo-h5-size: 1.5rem;           /* 24px */
+
+    /* Body — Pretendard */
+    --typo-body-01-size: 1.875rem;   /* 30px Bold */
+    --typo-body-02-size: 1.5rem;      /* 24px Bold */
+    --typo-body-03-size: 1.5rem;      /* 24px Medium */
+    --typo-body-04-size: 1rem;        /* 16px Medium */
+    --typo-body-05-size: 2.5rem;      /* 40px Regular */
+    --typo-body-06-size: 1.25rem;     /* 20px Regular */
+    --typo-body-07-size: 2rem;        /* 32px Light */
+    --typo-body-08-size: 1.25rem;     /* 20px Light */
+    --typo-body-09-size: 1.125rem;    /* 18px Light */
+    --typo-body-10-size: 0.9375rem;   /* 15px — Prata */
+
+    /* Caption — Pretendard */
+    --typo-caption-01-size: 1.5rem;   /* 24px Regular */
+    --typo-caption-02-size: 1.125rem; /* 18px Regular */
+    --typo-caption-03-size: 1rem;     /* 16px Regular */
+    --typo-caption-04-size: 0.9375rem; /* 15px Regular */
+    --typo-caption-05-size: 0.875rem; /* 14px Light */
+
+    /* Footer — Pretendard */
+    --typo-footer-01-size: 1rem;      /* 16px Light */
+
+    /* Card — Prata */
+    --typo-card-01-size: 1.5rem;      /* 24px */
+  }
+
+  /* Tablet weight overrides (size는 :root 변수) */
+  .typo--body-03 {
+    font-weight: var(--font-weight-medium);
+  }
+
+  .typo--body-04 {
+    font-weight: var(--font-weight-medium);
+  }
+
+  .typo--body-05 {
+    font-weight: var(--font-weight-regular);
+  }
+
+  .typo--body-09 {
+    font-weight: var(--font-weight-light);
+  }
+
+  .typo--body-10 {
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--typo-heading-line-height);
+  }
+
+  .typo--caption-01 {
+    font-weight: var(--font-weight-regular);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive — Mobile (~767px / 393px)
+   Title01 40 | Title02 30 | H1 30 | H2 28 | H3 24 | H4 20 | H5 18 | H6 16
+   Body01 Bold 20 | Body02 Bold 16 | Body03 Bold 15 | Body04 Medium 14 | Body05 Medium 18
+   Body06 Regular 20 | Body07 Regular 18 | Body08 Regular 14 | Body09 Light 20 | Body10 Light 15 | Body11 Light 12 | Body12 Prata 30
+   Card01 20 | Card02 14 | Caption01 Light 14 | Caption02 Regular 12 | Caption03 Regular 16 | Caption04 Regular 18
+   Caption05 Light 14 | Caption06 Light 12 | Email01 Light 12
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 47.9375rem) {
+  :root {
+    /* Title — Prata */
+    --typo-title-01-size: 2.5rem;     /* 40px */
+    --typo-title-02-size: 1.875rem;  /* 30px */
+
+    /* Heading — Prata */
+    --typo-h1-size: 1.875rem;         /* 30px */
+    --typo-h2-size: 1.75rem;          /* 28px */
+    --typo-h3-size: 1.5rem;           /* 24px */
+    --typo-h4-size: 1.25rem;          /* 20px */
+    --typo-h5-size: 1.125rem;         /* 18px */
+    --typo-h6-size: 1rem;             /* 16px */
+
+    /* Body — Pretendard */
+    --typo-body-01-size: 1.25rem;    /* 20px Bold */
+    --typo-body-02-size: 1rem;        /* 16px Bold */
+    --typo-body-03-size: 0.9375rem;   /* 15px Bold */
+    --typo-body-04-size: 0.875rem;    /* 14px Medium */
+    --typo-body-05-size: 1.125rem;    /* 18px Medium */
+    --typo-body-06-size: 1.25rem;     /* 20px Regular */
+    --typo-body-07-size: 1.125rem;    /* 18px Regular */
+    --typo-body-08-size: 0.875rem;    /* 14px Regular */
+    --typo-body-09-size: 1.25rem;     /* 20px Light */
+    --typo-body-10-size: 0.9375rem;   /* 15px Light */
+    --typo-body-11-size: 0.75rem;     /* 12px Light */
+    --typo-body-12-size: 1.875rem;    /* 30px Prata */
+
+    /* Caption — Pretendard */
+    --typo-caption-01-size: 0.875rem; /* 14px Light */
+    --typo-caption-02-size: 0.75rem;  /* 12px Regular */
+    --typo-caption-03-size: 1rem;     /* 16px Regular */
+    --typo-caption-04-size: 1.125rem; /* 18px Regular */
+    --typo-caption-05-size: 0.875rem; /* 14px Light */
+    --typo-caption-06-size: 0.75rem;  /* 12px Light */
+
+    /* Footer / Email — Pretendard */
+    --typo-footer-01-size: 0.75rem;   /* 12px Light */
+    --typo-email-01-size: 0.75rem;    /* 12px Light */
+
+    /* Card — Prata */
+    --typo-card-01-size: 1.25rem;     /* 20px */
+    --typo-card-02-size: 0.875rem;     /* 14px */
+  }
+
+  /* Mobile weight / family overrides */
+  .typo--body-03 {
+    font-weight: var(--font-weight-bold);
+  }
+
+  .typo--body-04 {
+    font-weight: var(--font-weight-medium);
+  }
+
+  .typo--body-05 {
+    font-weight: var(--font-weight-medium);
+  }
+
+  .typo--body-07 {
+    font-weight: var(--font-weight-regular);
+  }
+
+  .typo--body-08 {
+    font-weight: var(--font-weight-regular);
+  }
+
+  .typo--body-09 {
+    font-weight: var(--font-weight-light);
+  }
+
+  .typo--body-10 {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-light);
+    line-height: var(--typo-body-line-height);
+  }
+
+  .typo--body-12 {
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--typo-heading-line-height);
+  }
+
+  .typo--caption-01 {
+    font-weight: var(--font-weight-light);
+  }
+}

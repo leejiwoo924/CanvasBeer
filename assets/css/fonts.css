@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Fonts — Prata / Pretendard
+   ========================================================================== */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+/*
+  로컬 폰트 사용 시 assets/fonts/ 에 파일 추가 후
+  @font-face 선언으로 교체하세요.
+
+  @font-face {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Pretendard-Light.woff2') format('woff2');
+  }
+*/
+
+:root {
+  --font-display: 'Prata', 'Times New Roman', serif;
+  --font-body: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* Legacy aliases */
+  --font-primary: var(--font-body);
+  --font-secondary: var(--font-display);
+
+  /* Font Weight */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}

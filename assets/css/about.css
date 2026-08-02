@@ -1,0 +1,484 @@
+/* ==========================================================================
+   About Page CSS
+   BEM Naming Convention | 1rem = 16px
+   ========================================================================== */
+
+/* About Page — hero 제외 전체 배경 Primary 400, padding 없음 */
+#main-content > section:not(.about-hero):not(.about-copy):not(.about-inspiration):not(.about-cta) {
+  background-color: var(--color-primary-400);
+  padding: 0;
+}
+
+#main-content > section.about-copy {
+  background-color: var(--color-primary-400);
+  padding-block: 18.75rem; /* 300px */
+}
+
+/* --------------------------------------------------------------------------
+   About Hero Section — Brand hero와 동일 크기 (100vh, cover)
+   -------------------------------------------------------------------------- */
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.about-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('../images/about/about-bg-img.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-hero__container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.about-hero__title {
+  color: var(--color-neutral-50);
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Copy Section — Main Visual과 동일 SplitText 효과
+   -------------------------------------------------------------------------- */
+.about-copy {
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-copy__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-copy__content {
+  width: 100%;
+  max-width: 56.25rem; /* 900px */
+  text-align: center;
+  color: var(--color-neutral-900);
+}
+
+.about-copy__text {
+  color: var(--color-neutral-900);
+}
+
+.about-copy__text p {
+  margin: 0;
+}
+
+.about-copy__text p + p {
+  margin-top: var(--spacing-sm);
+}
+
+.about-copy__split-target .about-copy__char {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+@media screen and (max-width: 64rem) {
+  #main-content > section.about-copy {
+    padding-block: 12.5rem; /* 200px */
+  }
+
+  .about-copy__content {
+    max-width: 100%;
+  }
+
+  .about-copy__text p + p {
+    margin-top: 0.75rem; /* 12px */
+  }
+
+  .about-inspiration {
+    height: 100vh;
+    min-height: 100vh;
+  }
+
+  .about-inspiration__bg {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .about-inspiration__desc {
+    margin-top: 1.5rem; /* 24px — title ↔ body */
+  }
+
+  .about-ingredients__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--grid-gap); /* 24px */
+    justify-items: center;
+  }
+
+  .about-ingredients__item {
+    max-width: 100%;
+  }
+
+  .about-ingredients__img {
+    max-width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Inspiration Section
+   -------------------------------------------------------------------------- */
+.about-inspiration {
+  position: relative;
+  width: 100%;
+  height: 45rem; /* 720px */
+  overflow: hidden;
+}
+
+.about-inspiration__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('../images/about/Inspiration-img.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-inspiration__container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.about-inspiration__content {
+  text-align: center;
+  color: var(--color-neutral-50);
+}
+
+.about-inspiration__desc {
+  margin-top: 2.5rem; /* 40px */
+  color: var(--color-neutral-50);
+}
+
+/* --------------------------------------------------------------------------
+   Selecting Ingredients Section
+   -------------------------------------------------------------------------- */
+.about-ingredients__inner {
+  padding-block: 7.5rem; /* 120px */
+}
+
+.about-ingredients__title {
+  margin-bottom: 4rem; /* 64px */
+  color: var(--color-neutral-900);
+  text-align: center;
+}
+
+.about-ingredients__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap); /* 20px */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-ingredients__item {
+  text-align: center;
+}
+
+.about-ingredients__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-ingredients__img {
+  width: 100%;
+  max-width: 20rem; /* 320px */
+  height: auto;
+  object-fit: contain;
+}
+
+.about-ingredients__label {
+  margin-top: 2.5rem; /* 40px — image ↔ label */
+  color: var(--color-neutral-900);
+  text-transform: uppercase;
+}
+
+.about-ingredients__desc {
+  margin-top: 0.625rem; /* 10px — label ↔ desc */
+  color: var(--color-neutral-900);
+  word-break: keep-all;
+}
+
+.about-ingredients__desc-line {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Crafting Process Section
+   -------------------------------------------------------------------------- */
+.about-crafting__header {
+  padding-block: 7.5rem 4rem; /* 120px 64px */
+}
+
+.about-crafting__title {
+  color: var(--color-neutral-900);
+}
+
+.about-crafting__intro {
+  margin-top: 0.625rem; /* 10px — title ↔ intro */
+  color: var(--color-neutral-900);
+  word-break: keep-all;
+}
+
+.about-crafting__slider-wrap {
+  overflow: hidden;
+}
+
+.about-crafting__slide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 45rem; /* 720px */
+}
+
+.about-crafting__media {
+  min-width: 0;
+  min-height: 45rem;
+}
+
+.about-crafting__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-crafting__panel {
+  display: flex;
+  align-items: stretch;
+  min-height: 45rem;
+  background-color: var(--color-neutral-50);
+}
+
+.about-crafting__panel-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 7.5rem;
+  color: var(--color-neutral-900);
+}
+
+.about-crafting__slide-lead {
+  margin-top: 5rem; /* 80px — slide title ↔ lead */
+  color: var(--color-neutral-900);
+}
+
+.about-crafting__slide-desc {
+  margin-top: 0.75rem; /* 12px — lead ↔ body */
+  color: var(--color-neutral-900);
+  line-height: 1.8; /* 180% */
+  word-break: keep-all;
+}
+
+.about-crafting__slide-desc p {
+  margin: 0;
+}
+
+.about-crafting__slide-desc p + p {
+  margin-top: var(--spacing-xs);
+}
+
+.about-crafting__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-top: auto;
+  padding-top: var(--spacing-2xl);
+  color: var(--color-neutral-900);
+}
+
+.about-crafting__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.about-crafting__arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.about-crafting__arrow:focus-visible {
+  outline: 0.125rem solid var(--color-neutral-900);
+  outline-offset: 0.25rem;
+}
+
+.about-crafting__fraction {
+  min-width: 3rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 64rem) {
+  .about-crafting__header {
+    padding-block: var(--spacing-2xl) var(--spacing-xl); /* 64px 48px */
+  }
+
+  .about-crafting__slider-wrap {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    margin-bottom: 0;
+    padding-inline: 0;
+    overflow: hidden;
+    height: auto;
+  }
+
+  .about-crafting__swiper .swiper-slide {
+    height: auto;
+    min-height: 0;
+  }
+
+  .about-crafting__slide-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: auto;
+    min-height: 0 !important;
+    max-height: none;
+  }
+
+  .about-crafting__media,
+  .about-crafting__panel {
+    aspect-ratio: 1 / 1;
+    min-height: 0 !important;
+    width: 100%;
+    height: auto;
+  }
+
+  .about-crafting__panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-crafting__panel-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    padding: 2rem; /* 32px */
+    text-align: left;
+    overflow: hidden;
+  }
+
+  .about-crafting__slide-title {
+    font-family: var(--font-body);
+    font-size: var(--typo-body-02-size); /* 24px Bold */
+    font-weight: var(--font-weight-bold);
+    line-height: var(--typo-body-line-height);
+  }
+
+  .about-crafting__slide-lead {
+    margin-top: 2.5rem; /* 40px — slide title ↔ lead */
+  }
+
+  .about-crafting__slide-desc {
+    margin-top: 0.3125rem; /* 5px — lead ↔ body */
+  }
+
+  .about-crafting__nav {
+    position: static;
+    margin-top: 3.75rem; /* 60px — body ↔ pagination */
+    padding-top: 0;
+  }
+
+  .about-crafting__fraction {
+    font-size: var(--typo-caption-03-size);
+  }
+
+  .about-crafting.section {
+    padding: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   CTA Section
+   -------------------------------------------------------------------------- */
+.about-cta {
+  position: relative;
+  width: 100%;
+  min-height: 45rem; /* 720px */
+  overflow: hidden;
+}
+
+.about-cta__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('../images/about/cta-img.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-cta__container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 45rem; /* 720px */
+}
+
+.about-cta__text {
+  text-align: center;
+  color: var(--color-neutral-50);
+  word-break: keep-all;
+}
+
+@media screen and (max-width: 64rem) {
+  .about-cta {
+    margin-top: 0;
+    padding-top: 0;
+    min-height: 100vh;
+  }
+
+  .about-cta__bg {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .about-cta__container {
+    min-height: 100vh;
+  }
+
+  .about-cta__text {
+    width: 100%;
+    max-width: 100%;
+  }
+}

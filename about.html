@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Canvas & Beer 소개 페이지">
+  <title>Canvas &amp; Beer | About</title>
+  <link rel="icon" type="image/png" href="favicon/favicon.png">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/popup.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-nav">본문 바로가기</a>
+
+  <main id="main-content">
+
+    <!-- About Hero Section -->
+    <section class="about-hero" aria-labelledby="about-hero-title">
+      <div class="about-hero__bg" aria-hidden="true"></div>
+
+      <header class="header header--main header--hero" role="banner">
+        <div class="container">
+          <div class="header__inner">
+            <div class="header__logo">
+              <a href="index.html" class="header__logo-link" aria-label="Canvas & Beer 홈">
+                <img src="assets/images/logo/logo.png" alt="" class="header__logo-img" width="256" height="49">
+                <span class="header__logo-text">Canvas &amp; Beer</span>
+              </a>
+            </div>
+            <nav class="header__nav" role="navigation" aria-label="주요 메뉴">
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="brand.html" class="header__nav-link">Brand</a></li>
+                <li class="header__nav-item"><a href="about.html" class="header__nav-link">About</a></li>
+                <li class="header__nav-item"><a href="collection.html" class="header__nav-link">Collection</a></li>
+                <li class="header__nav-item"><a href="contact.html" class="header__nav-link">Contact</a></li>
+              </ul>
+            </nav>
+            <button type="button" class="header__menu-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav">
+              <span class="header__menu-btn-bar"></span>
+              <span class="header__menu-btn-bar"></span>
+              <span class="header__menu-btn-bar"></span>
+            </button>
+          </div>
+        </div>
+        <nav id="mobile-nav" class="header__mobile-nav" role="navigation" aria-label="모바일 메뉴">
+          <ul class="header__mobile-nav-list">
+            <li class="header__mobile-nav-item"><a href="brand.html" class="header__mobile-nav-link">Brand</a></li>
+            <li class="header__mobile-nav-item"><a href="about.html" class="header__mobile-nav-link">About</a></li>
+            <li class="header__mobile-nav-item"><a href="collection.html" class="header__mobile-nav-link">Collection</a></li>
+            <li class="header__mobile-nav-item"><a href="contact.html" class="header__mobile-nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="container about-hero__container">
+        <h1 id="about-hero-title" class="about-hero__title typo--h2">ART TO BEER</h1>
+      </div>
+    </section>
+
+    <!-- Copy Section -->
+    <section class="about-copy section" aria-label="브랜드 메시지">
+      <div class="container about-copy__container">
+        <div class="about-copy__content">
+          <div class="about-copy__text about-copy__split-target typo--body-01">
+            <p>하나의 영감은 재료가 되고,</p>
+            <p>시간이 더해져 하나의 작품이 됩니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inspiration Section -->
+    <section class="about-inspiration" aria-labelledby="about-inspiration-title">
+      <div class="about-inspiration__bg" aria-hidden="true"></div>
+      <div class="container about-inspiration__container">
+        <div class="about-inspiration__content">
+          <h2 id="about-inspiration-title" class="about-inspiration__title typo--h2">Inspiration</h2>
+          <p class="about-inspiration__desc typo--caption-02">
+            그림이 작가의 감정에서 시작되듯,<br>
+            맥주는 하나의 영감에서 시작됩니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selecting Ingredients Section -->
+    <section class="about-ingredients section" aria-labelledby="about-ingredients-title">
+      <div class="container about-ingredients__inner">
+        <h2 id="about-ingredients-title" class="about-ingredients__title typo--h2">Selecting Ingredients</h2>
+
+        <ul class="about-ingredients__list">
+          <li class="about-ingredients__item">
+            <div class="about-ingredients__media">
+              <img
+                src="assets/images/about/BASE-COLOR.png"
+                alt=""
+                class="about-ingredients__img"
+                width="320"
+                height="320"
+                loading="lazy"
+              >
+            </div>
+            <p class="about-ingredients__label typo--body-04">BASE COLOR</p>
+            <p class="about-ingredients__desc typo--caption-03">
+              <span class="about-ingredients__desc-line">고소한 풍미와</span>
+              <span class="about-ingredients__desc-line">맥주의 기본을 만드는 재료</span>
+            </p>
+          </li>
+
+          <li class="about-ingredients__item">
+            <div class="about-ingredients__media">
+              <img
+                src="assets/images/about/ACCENT-COLOR.png"
+                alt=""
+                class="about-ingredients__img"
+                width="320"
+                height="320"
+                loading="lazy"
+              >
+            </div>
+            <p class="about-ingredients__label typo--body-04">ACCENT COLOR</p>
+            <p class="about-ingredients__desc typo--caption-03">
+              <span class="about-ingredients__desc-line">향과 개성을 표현하는</span>
+              <span class="about-ingredients__desc-line">맥주의 포인트</span>
+            </p>
+          </li>
+
+          <li class="about-ingredients__item">
+            <div class="about-ingredients__media">
+              <img
+                src="assets/images/about/SPECIAL-TONE.png"
+                alt=""
+                class="about-ingredients__img"
+                width="320"
+                height="320"
+                loading="lazy"
+              >
+            </div>
+            <p class="about-ingredients__label typo--body-04">SPECIAL TONE</p>
+            <p class="about-ingredients__desc typo--caption-03">
+              <span class="about-ingredients__desc-line">새로운 감각을 더하는</span>
+              <span class="about-ingredients__desc-line">감성적인 요소</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Crafting Process Section -->
+    <section class="about-crafting section" aria-labelledby="about-crafting-title">
+      <div class="container about-crafting__header">
+        <h2 id="about-crafting-title" class="about-crafting__title typo--h2">Crafting Process</h2>
+        <p class="about-crafting__intro typo--caption-02">
+          화가가 색을 섞듯,<br>
+          브루어는 맛을 조율합니다.
+        </p>
+      </div>
+
+      <div class="about-crafting__slider-wrap">
+        <div class="about-crafting__slider swiper about-crafting__swiper" aria-label="양조 과정 슬라이드">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide about-crafting__slide">
+              <div class="about-crafting__slide-grid">
+                <div class="about-crafting__media">
+                  <img
+                    src="assets/images/about/Crafting-01-Mashing-img.png"
+                    alt=""
+                    class="about-crafting__img"
+                    width="960"
+                    height="720"
+                    loading="lazy"
+                  >
+                </div>
+                <div class="about-crafting__panel">
+                  <div class="about-crafting__panel-inner">
+                    <h3 class="about-crafting__slide-title typo--card-01">01 Mashing</h3>
+                    <p class="about-crafting__slide-lead typo--body-04">곡물에서 첫 번째 색을 만들다.</p>
+                    <div class="about-crafting__slide-desc typo--caption-03">
+                      <p>모든 작품에는 첫 번째 붓질이 있습니다.<br>
+                        양조에서도 마찬가지입니다.<br>
+                        엄선된 몰트를 따뜻한 물과 천천히 만나게 하여<br>
+                        맥아 속의 당분과 깊은 풍미를 추출합니다.<br>
+                        이 과정은 맥주의 색과 바디감을 결정하는 가장 중요한 시작이며,<br>
+                        하나의 캔버스에 첫 번째 색을 올리는 순간과 같습니다.</p>
+                    </div>
+                    <div class="about-crafting__nav">
+                      <button type="button" class="about-crafting__arrow about-crafting__arrow--prev" aria-label="이전 슬라이드">&lt;</button>
+                      <span class="about-crafting__fraction" aria-hidden="true">1 / 4</span>
+                      <button type="button" class="about-crafting__arrow about-crafting__arrow--next" aria-label="다음 슬라이드">&gt;</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="swiper-slide about-crafting__slide">
+              <div class="about-crafting__slide-grid">
+                <div class="about-crafting__media">
+                  <img
+                    src="assets/images/about/Crafting-02-Boiling-img.png"
+                    alt=""
+                    class="about-crafting__img"
+                    width="960"
+                    height="720"
+                    loading="lazy"
+                  >
+                </div>
+                <div class="about-crafting__panel">
+                  <div class="about-crafting__panel-inner">
+                    <h3 class="about-crafting__slide-title typo--card-01">02 Boiling</h3>
+                    <p class="about-crafting__slide-lead typo--body-04">맛의 균형을 조율하다.</p>
+                    <div class="about-crafting__slide-desc typo--caption-03">
+                      <p>맥즙이 충분히 끓어오르면 향과 개성을 더할 차례입니다.<br>
+                        정해진 온도와 시간 속에서 홉과 다양한 재료를 더하며<br>
+                        풍미의 균형을 만들어갑니다.<br>
+                        작품에서 색을 겹겹이 쌓아 깊이를 만드는 것처럼,<br>
+                        이 과정은 맥주의 성격을 완성하는 중요한 단계입니다.</p>
+                    </div>
+                    <div class="about-crafting__nav">
+                      <button type="button" class="about-crafting__arrow about-crafting__arrow--prev" aria-label="이전 슬라이드">&lt;</button>
+                      <span class="about-crafting__fraction" aria-hidden="true">2 / 4</span>
+                      <button type="button" class="about-crafting__arrow about-crafting__arrow--next" aria-label="다음 슬라이드">&gt;</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="swiper-slide about-crafting__slide">
+              <div class="about-crafting__slide-grid">
+                <div class="about-crafting__media">
+                  <img
+                    src="assets/images/about/Crafting-03-Fermentation-img.png"
+                    alt=""
+                    class="about-crafting__img"
+                    width="960"
+                    height="720"
+                    loading="lazy"
+                  >
+                </div>
+                <div class="about-crafting__panel">
+                  <div class="about-crafting__panel-inner">
+                    <h3 class="about-crafting__slide-title typo--card-01">03 Hopping</h3>
+                    <p class="about-crafting__slide-lead typo--body-04">향이라는 감정을 더하다</p>
+                    <div class="about-crafting__slide-desc typo--caption-03">
+                      <p>홉은 맥주의 개성을 결정하는 핵심 재료입니다.<br>
+                        투입 시점과 양에 따라 향과 쌉쌀함이 달라지며,<br>
+                        작품에 마지막 색을 더하듯 맥주에 브랜드만의 개성을<br>
+                        입힙니다.<br>
+                        Canvas & Beer는 작품이 가진 감정을 향으로 표현하기 위해<br>
+                        홉을 섬세하게 선택하고 조율합니다.</p>
+                    </div>
+                    <div class="about-crafting__nav">
+                      <button type="button" class="about-crafting__arrow about-crafting__arrow--prev" aria-label="이전 슬라이드">&lt;</button>
+                      <span class="about-crafting__fraction" aria-hidden="true">3 / 4</span>
+                      <button type="button" class="about-crafting__arrow about-crafting__arrow--next" aria-label="다음 슬라이드">&gt;</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="swiper-slide about-crafting__slide">
+              <div class="about-crafting__slide-grid">
+                <div class="about-crafting__media">
+                  <img
+                    src="assets/images/about/Crafting-04-Packaging-img.png"
+                    alt=""
+                    class="about-crafting__img"
+                    width="960"
+                    height="720"
+                    loading="lazy"
+                  >
+                </div>
+                <div class="about-crafting__panel">
+                  <div class="about-crafting__panel-inner">
+                    <h3 class="about-crafting__slide-title typo--card-01">04 Brewing</h3>
+                    <p class="about-crafting__slide-lead typo--body-04">시간이 지나고, 서로 어우러지는 순간</p>
+                    <div class="about-crafting__slide-desc typo--caption-03">
+                      <p>좋은 작품은 하루 만에 완성되지 않습니다.<br>
+                        맥주 역시 충분한 시간을 통해 향과 맛이 자연스럽게<br>
+                        어우러집니다.<br>
+                        숙성과 발효를 거치는 동안 각각의 재료는<br>
+                        하나의 풍미로 연결되고, 기다림 끝에 비로소<br>
+                        Canvas & Beer만의 한 잔이 완성됩니다.</p>
+                    </div>
+                    <div class="about-crafting__nav">
+                      <button type="button" class="about-crafting__arrow about-crafting__arrow--prev" aria-label="이전 슬라이드">&lt;</button>
+                      <span class="about-crafting__fraction" aria-hidden="true">4 / 4</span>
+                      <button type="button" class="about-crafting__arrow about-crafting__arrow--next" aria-label="다음 슬라이드">&gt;</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="about-cta" aria-label="브랜드 CTA">
+      <div class="about-cta__bg" aria-hidden="true"></div>
+      <div class="container about-cta__container">
+        <p class="about-cta__text typo--body-02">
+          엄선된 재료와 장인의 손길,<br>
+          그리고 시간을 만나<br>
+          Canvas &amp; Beer만의 특별한 한 잔으로 완성됩니다.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <img src="assets/images/logo/footer-logo.png" alt="Canvas & Beer" class="footer__logo-img" width="284" height="54">
+          </div>
+          <ul class="footer__sns-list" aria-label="소셜 미디어">
+            <li>
+              <a href="#" class="footer__sns-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icons/instagram.png" alt="" class="footer__sns-icon" width="24" height="24">
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer__sns-link" aria-label="KakaoTalk" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icons/kakao.png" alt="" class="footer__sns-icon" width="24" height="24">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__info typo--footer-01">
+          <div class="footer__info-group">
+            <p class="footer__info-line">Address: 서울특별시 중구 캔버스로 52, 아틀리에타워 3층 (예술동 88-12)</p>
+            <p class="footer__info-line">Tel: 032-123-4567</p>
+            <p class="footer__info-line">사업자등록번호: 123-45-01234</p>
+            <p class="footer__info-line">
+              <a href="mailto:canvasbeer@naver.com" class="footer__info-link">canvasbeer@naver.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="popup-overlay" aria-hidden="true"></div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/header.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/gsap.js"></script>
+  <script src="assets/js/about.js"></script>
+</body>
+</html>

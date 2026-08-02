@@ -1,0 +1,229 @@
+/* ==========================================================================
+   Layer Popup CSS
+   BEM Naming Convention | 1rem = 16px
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Popup Overlay
+   -------------------------------------------------------------------------- */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  background-color: var(--color-overlay);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base),
+              visibility var(--transition-base);
+}
+
+.popup-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --------------------------------------------------------------------------
+   Popup Container
+   -------------------------------------------------------------------------- */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: var(--z-popup);
+  width: calc(100% - 2rem);
+  max-width: 37.5rem; /* 600px */
+  max-height: calc(100vh - 4rem);
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0.95);
+  transition: opacity var(--transition-base),
+              visibility var(--transition-base),
+              transform var(--transition-base);
+}
+
+.popup.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Popup Sizes */
+.popup--sm {
+  max-width: 25rem; /* 400px */
+}
+
+.popup--lg {
+  max-width: 50rem; /* 800px */
+}
+
+.popup--full {
+  width: calc(100% - 2rem);
+  max-width: 75rem; /* 1200px */
+}
+
+/* --------------------------------------------------------------------------
+   Popup Header
+   -------------------------------------------------------------------------- */
+.popup__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 0.0625rem solid var(--color-gray-200);
+}
+
+.popup__title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.popup__close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  transition: background-color var(--transition-base);
+}
+
+.popup__close-btn:hover,
+.popup__close-btn:focus-visible {
+  background-color: var(--color-gray-100);
+}
+
+.popup__close-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   Popup Body
+   -------------------------------------------------------------------------- */
+.popup__body {
+  padding: var(--spacing-lg);
+  overflow-y: auto;
+  max-height: calc(100vh - 12rem);
+}
+
+.popup__body img {
+  width: 100%;
+  margin-bottom: var(--spacing-md);
+}
+
+.popup__text {
+  font-size: var(--font-size-base);
+  line-height: 1.8;
+  color: var(--color-secondary);
+}
+
+.popup__text + .popup__text {
+  margin-top: var(--spacing-sm);
+}
+
+/* --------------------------------------------------------------------------
+   Popup Footer
+   -------------------------------------------------------------------------- */
+.popup__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-top: 0.0625rem solid var(--color-gray-200);
+}
+
+.popup__footer--center {
+  justify-content: center;
+}
+
+/* Don't show today checkbox */
+.popup__checkbox-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-right: auto;
+}
+
+.popup__checkbox {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--color-accent);
+}
+
+.popup__checkbox-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-secondary);
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   Image Popup (Main page notice)
+   -------------------------------------------------------------------------- */
+.popup--image {
+  max-width: 31.25rem; /* 500px */
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.popup--image .popup__body {
+  padding: 0;
+  max-height: none;
+}
+
+.popup--image .popup__close-btn {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--color-white);
+}
+
+.popup--image .popup__close-btn:hover,
+.popup--image .popup__close-btn:focus-visible {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup--image .popup__footer {
+  background-color: var(--color-white);
+  border-top: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive - Mobile
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 47.9375rem) {
+  .popup {
+    width: calc(100% - 1rem);
+    max-height: calc(100vh - 2rem);
+    border-radius: 0.375rem;
+  }
+
+  .popup__header {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .popup__body {
+    padding: var(--spacing-md);
+    max-height: calc(100vh - 10rem);
+  }
+
+  .popup__footer {
+    flex-direction: column;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .popup__checkbox-wrap {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .popup__footer .btn {
+    width: 100%;
+  }
+}

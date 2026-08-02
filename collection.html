@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Canvas & Beer 컬렉션 페이지">
+  <title>Canvas &amp; Beer | Collection</title>
+  <link rel="icon" type="image/png" href="favicon/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/popup.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/collection.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-nav">본문 바로가기</a>
+
+  <main id="main-content">
+
+    <!-- Collection Hero Section -->
+    <section class="collection-hero" aria-labelledby="collection-hero-title">
+      <div class="collection-hero__bg" aria-hidden="true"></div>
+
+      <header class="header header--main header--hero" role="banner">
+        <div class="container">
+          <div class="header__inner">
+            <div class="header__logo">
+              <a href="index.html" class="header__logo-link" aria-label="Canvas & Beer 홈">
+                <img src="assets/images/logo/logo.png" alt="" class="header__logo-img" width="256" height="49">
+                <span class="header__logo-text">Canvas &amp; Beer</span>
+              </a>
+            </div>
+            <nav class="header__nav" role="navigation" aria-label="주요 메뉴">
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="brand.html" class="header__nav-link">Brand</a></li>
+                <li class="header__nav-item"><a href="about.html" class="header__nav-link">About</a></li>
+                <li class="header__nav-item"><a href="collection.html" class="header__nav-link">Collection</a></li>
+                <li class="header__nav-item"><a href="contact.html" class="header__nav-link">Contact</a></li>
+              </ul>
+            </nav>
+            <button type="button" class="header__menu-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav">
+              <span class="header__menu-btn-bar"></span>
+              <span class="header__menu-btn-bar"></span>
+              <span class="header__menu-btn-bar"></span>
+            </button>
+          </div>
+        </div>
+        <nav id="mobile-nav" class="header__mobile-nav" role="navigation" aria-label="모바일 메뉴">
+          <ul class="header__mobile-nav-list">
+            <li class="header__mobile-nav-item"><a href="brand.html" class="header__mobile-nav-link">Brand</a></li>
+            <li class="header__mobile-nav-item"><a href="about.html" class="header__mobile-nav-link">About</a></li>
+            <li class="header__mobile-nav-item"><a href="collection.html" class="header__mobile-nav-link">Collection</a></li>
+            <li class="header__mobile-nav-item"><a href="contact.html" class="header__mobile-nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="container collection-hero__container">
+        <h1 id="collection-hero-title" class="collection-hero__title typo--title-02">COLLECTION</h1>
+      </div>
+    </section>
+
+    <!-- Collection Showcase -->
+    <div class="collection-showcase">
+      <article class="collection-showcase__item collection-showcase__item--sunset" aria-labelledby="collection-sunset-title">
+        <div class="collection-showcase__bg" aria-hidden="true"></div>
+        <div class="container collection-showcase__container">
+          <div class="collection-showcase__grid">
+            <div class="collection-showcase__content">
+              <h3 id="collection-sunset-title" class="collection-showcase__title typo--h4">Sunset Ale</h3>
+              <p class="collection-showcase__caption typo--caption-02">노을의 따뜻한 색감에서 영감을 받은 부드러운 에일</p>
+              <button type="button" class="collection-showcase__btn typo--body-04" data-collection-open="sunset">
+                <span class="collection-showcase__btn-text">View More</span>
+                <span class="collection-showcase__btn-arrow" aria-hidden="true">&gt;</span>
+              </button>
+            </div>
+            <div class="collection-showcase__product">
+              <img
+                src="assets/images/collection/Sunset Ale.png"
+                alt=""
+                class="collection-showcase__product-img"
+                width="520"
+                height="620"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="collection-showcase__item collection-showcase__item--forest collection-showcase__item--reverse" aria-labelledby="collection-forest-title">
+        <div class="collection-showcase__bg" aria-hidden="true"></div>
+        <div class="container collection-showcase__container">
+          <div class="collection-showcase__grid">
+            <div class="collection-showcase__content">
+              <h3 id="collection-forest-title" class="collection-showcase__title typo--h4">Forest IPA</h3>
+              <p class="collection-showcase__caption typo--caption-02">숲의 향기를 담은 IPA </p>
+              <button type="button" class="collection-showcase__btn collection-showcase__btn--reverse typo--body-04" data-collection-open="forest">
+                <span class="collection-showcase__btn-arrow" aria-hidden="true">&lt;</span>
+                <span class="collection-showcase__btn-text">View More</span>
+              </button>
+            </div>
+            <div class="collection-showcase__product">
+              <img
+                src="assets/images/collection/Forest IPA.png"
+                alt=""
+                class="collection-showcase__product-img"
+                width="520"
+                height="620"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="collection-showcase__item collection-showcase__item--ocean" aria-labelledby="collection-ocean-title">
+        <div class="collection-showcase__bg" aria-hidden="true"></div>
+        <div class="container collection-showcase__container">
+          <div class="collection-showcase__grid">
+            <div class="collection-showcase__content">
+              <h3 id="collection-ocean-title" class="collection-showcase__title typo--h4">Ocean Lager</h3>
+              <p class="collection-showcase__caption typo--caption-02">푸른 바다에서 영감을 받은 라거</p>
+              <button type="button" class="collection-showcase__btn typo--body-04" data-collection-open="ocean">
+                <span class="collection-showcase__btn-text">View More</span>
+                <span class="collection-showcase__btn-arrow" aria-hidden="true">&gt;</span>
+              </button>
+            </div>
+            <div class="collection-showcase__product">
+              <img
+                src="assets/images/collection/Ocean Lager.png"
+                alt=""
+                class="collection-showcase__product-img"
+                width="520"
+                height="620"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="collection-showcase__item collection-showcase__item--midnight collection-showcase__item--reverse" aria-labelledby="collection-midnight-title">
+        <div class="collection-showcase__bg" aria-hidden="true"></div>
+        <div class="container collection-showcase__container">
+          <div class="collection-showcase__grid">
+            <div class="collection-showcase__content">
+              <h3 id="collection-midnight-title" class="collection-showcase__title typo--h4">Midnight Stout</h3>
+              <p class="collection-showcase__caption typo--caption-02">밤하늘을 담은 스타우트</p>
+              <button type="button" class="collection-showcase__btn collection-showcase__btn--reverse typo--body-04" data-collection-open="midnight">
+                <span class="collection-showcase__btn-arrow" aria-hidden="true">&lt;</span>
+                <span class="collection-showcase__btn-text">View More</span>
+              </button>
+            </div>
+            <div class="collection-showcase__product">
+              <img
+                src="assets/images/collection/Midnight Stout.png"
+                alt=""
+                class="collection-showcase__product-img"
+                width="520"
+                height="620"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <img src="assets/images/logo/footer-logo.png" alt="Canvas & Beer" class="footer__logo-img" width="284" height="54">
+          </div>
+          <ul class="footer__sns-list" aria-label="소셜 미디어">
+            <li>
+              <a href="#" class="footer__sns-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icons/instagram.png" alt="" class="footer__sns-icon" width="24" height="24">
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer__sns-link" aria-label="KakaoTalk" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icons/kakao.png" alt="" class="footer__sns-icon" width="24" height="24">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__info typo--footer-01">
+          <div class="footer__info-group">
+            <p class="footer__info-line">Address: 서울특별시 중구 캔버스로 52, 아틀리에타워 3층 (예술동 88-12)</p>
+            <p class="footer__info-line">Tel: 032-123-4567</p>
+            <p class="footer__info-line">사업자등록번호: 123-45-01234</p>
+            <p class="footer__info-line">
+              <a href="mailto:canvasbeer@naver.com" class="footer__info-link">canvasbeer@naver.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Collection Detail Popup -->
+  <div class="popup-overlay" aria-hidden="true"></div>
+  <div id="popup-collection-detail" class="popup popup--collection" role="dialog" aria-modal="true" aria-labelledby="popup-collection-title">
+    <div class="collection-popup">
+      <div class="collection-popup__media">
+        <img src="" alt="" class="collection-popup__img" id="popup-collection-img" width="520" height="620">
+      </div>
+      <div class="collection-popup__content">
+        <button type="button" class="collection-popup__close" data-popup-close aria-label="팝업 닫기">
+          <span class="collection-popup__close-icon" aria-hidden="true">&times;</span>
+        </button>
+        <div class="collection-popup__intro">
+          <h2 id="popup-collection-title" class="collection-popup__title typo--h5"></h2>
+          <div class="collection-popup__section">
+            <h3 class="collection-popup__label typo--card-01">Flavor</h3>
+            <p class="collection-popup__text typo--caption-02" id="popup-collection-flavor"></p>
+          </div>
+        </div>
+        <div class="collection-popup__section collection-popup__section--pairing">
+          <h3 class="collection-popup__label typo--card-01">Pairing</h3>
+          <ul class="collection-popup__list typo--caption-02" id="popup-collection-pairing"></ul>
+        </div>
+        <ul class="collection-popup__tags" id="popup-collection-tags" aria-label="Flavor notes"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/header.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/swiper.js"></script>
+  <script src="assets/js/collection.js"></script>
+</body>
+</html>
