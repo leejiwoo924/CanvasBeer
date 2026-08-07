@@ -28,7 +28,7 @@
   --typo-body-01-size: 3.75rem;    /* Body01 — 60px Bold */
   --typo-body-02-size: 2.5rem;     /* Body02 — 40px Bold */
   --typo-body-03-size: 1.875rem;   /* Body03 — 30px Bold */
-  --typo-body-04-size: 2.25rem;    /* Body04 — 36px Regular */
+  --typo-body-04-size: 2.25rem;    /* Body04 — 36px Medium */
   --typo-body-05-size: 1.5rem;     /* Body05 — 24px Medium */
   --typo-body-06-size: 2rem;       /* Body06 — 32px Regular */
   --typo-body-07-size: 1.5rem;     /* Body07 — 24px Light */
@@ -83,7 +83,7 @@
 
 /* --------------------------------------------------------------------------
    Heading — Prata
-   H1 64 | H2 60 | H3 48 | H4 24 | H5 20
+   H1 64 | H2 60 | H3 48 | H4 24 | H5 20 | H6 16
    -------------------------------------------------------------------------- */
 .typo--h1 {
   /* H1 — Prata 64 */
@@ -164,10 +164,10 @@
 }
 
 .typo--body-04 {
-  /* Body04 — Pretendard Regular 36 */
+  /* Body04 — Pretendard Medium 36 */
   font-family: var(--font-body);
   font-size: var(--typo-body-04-size);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-medium);
   line-height: var(--typo-body-line-height);
 }
 
@@ -329,7 +329,7 @@
 
 /* --------------------------------------------------------------------------
    Responsive — Tablet (~1024px)
-   Title01 60 | Title02 40 | H1 60 | H2 32 | H3 20 | H5 24
+   Title01 60 | Title02 40 | H1 60 | H2 32 | H3 20 | H5 24 | H6 16
    Body01 Bold 30 | Body02 Bold 24 | Body03 Medium 24 | Body04 Medium 16
    Body05 Regular 40 | Body06 Regular 20 | Body07 Light 32 | Body08 Light 20 | Body09 Light 18 | Body10 Prata 15
    Card01 24 | Caption01 Regular 24 | Caption02 Regular 18 | Caption03 Regular 16
@@ -346,6 +346,7 @@
     --typo-h2-size: 2rem;             /* 32px */
     --typo-h3-size: 1.25rem;          /* 20px */
     --typo-h5-size: 1.5rem;           /* 24px */
+    --typo-h6-size: 1rem;             /* 16px */
 
     /* Body — Pretendard */
     --typo-body-01-size: 1.875rem;   /* 30px Bold */
@@ -365,6 +366,7 @@
     --typo-caption-03-size: 1rem;     /* 16px Regular */
     --typo-caption-04-size: 0.9375rem; /* 15px Regular */
     --typo-caption-05-size: 0.875rem; /* 14px Light */
+    --typo-caption-06-size: 0.9375rem; /* 15px Light */
 
     /* Footer — Pretendard */
     --typo-footer-01-size: 1rem;      /* 16px Light */

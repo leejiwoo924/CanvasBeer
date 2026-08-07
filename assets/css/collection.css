@@ -4,7 +4,7 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Collection Hero Section — Brand hero와 동일 크기 (100vh, cover)
+   Collection Hero Section
    -------------------------------------------------------------------------- */
 .collection-hero {
   position: relative;
@@ -45,7 +45,7 @@
 .collection-showcase__item {
   position: relative;
   width: 100%;
-  height: 44.75rem; /* 716px */
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -56,6 +56,15 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transform: scale(1);
+  transform-origin: center center;
+  transition: transform var(--transition-slow);
+  will-change: transform;
+}
+
+.collection-showcase__item:hover .collection-showcase__bg,
+.collection-showcase__item:focus-within .collection-showcase__bg {
+  transform: scale(1.08);
 }
 
 .collection-showcase__item--sunset .collection-showcase__bg {
@@ -77,6 +86,7 @@
 .collection-showcase__container {
   position: relative;
   z-index: 1;
+  min-height: 100vh;
   height: 100%;
 }
 
@@ -84,6 +94,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  min-height: 100vh;
   height: 100%;
 }
 
@@ -98,7 +109,7 @@
 
 .collection-showcase__content {
   align-self: start;
-  padding-top: 7.5rem; /* 120px */
+  padding-top: 7.5rem;
   color: var(--color-neutral-50);
 }
 
@@ -106,8 +117,25 @@
   color: var(--color-neutral-50);
 }
 
+/* PC — showcase typography (H3 / Body06) */
+@media screen and (min-width: 64.0625rem) {
+  .collection-showcase__title {
+    font-family: var(--font-display);
+    font-size: var(--typo-h3-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--typo-heading-line-height);
+  }
+
+  .collection-showcase__caption {
+    font-family: var(--font-body);
+    font-size: var(--typo-body-06-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--typo-body-line-height);
+  }
+}
+
 .collection-showcase__caption {
-  margin-top: 0.625rem; /* 10px — title ↔ caption */
+  margin-top: 0.625rem;
   color: var(--color-neutral-50);
   word-break: keep-all;
 }
@@ -116,7 +144,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
-  margin-top: 0.75rem; /* 12px — caption ↔ button */
+  margin-top: 0.75rem;
   padding: 0;
   color: var(--color-neutral-50);
   background: transparent;
@@ -149,24 +177,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: center;
   height: 100%;
+  min-height: 100%;
 }
 
 .collection-showcase__product-img {
   width: auto;
   max-width: 100%;
-  max-height: 38rem;
+  max-height: min(38rem, 70vh);
   object-fit: contain;
 }
 
 /* Tablet — showcase: PC 레이아웃 유지 (2열, reverse 교차) */
 @media screen and (max-width: 64rem) {
   .collection-showcase__caption {
-    margin-top: 0.625rem; /* 10px — title ↔ caption */
+    margin-top: 0.625rem;
   }
 
   .collection-showcase__btn {
-    margin-top: 0.75rem; /* 12px — caption ↔ button */
+    margin-top: 0.75rem;
   }
 }
 
@@ -302,8 +332,8 @@
    Collection Detail Popup
    -------------------------------------------------------------------------- */
 .popup.popup--collection {
-  width: min(82.5rem, calc(100vw - 4rem)); /* 1320px */
-  height: min(45rem, calc(100vh - 4rem)); /* 720px — 콘텐츠 전체 표시 */
+  width: min(82.5rem, calc(100vw - 4rem));
+  height: min(45rem, calc(100vh - 4rem));
   max-width: 82.5rem;
   max-height: 45rem;
   background-color: transparent;
@@ -332,8 +362,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3.125rem; /* 50px */
-  height: 3.125rem; /* 50px */
+  width: 3.125rem;
+  height: 3.125rem;
   padding: 0;
   font-family: inherit;
   color: var(--color-neutral-900);
@@ -377,7 +407,7 @@
   grid-template-rows: auto auto auto;
   height: 100%;
   min-height: 0;
-  padding: 3.125rem; /* 50px */
+  padding: 3.125rem;
   overflow: hidden;
   text-align: left;
   color: var(--color-primary-500);
@@ -395,18 +425,18 @@
 }
 
 .collection-popup__title {
-  margin-bottom: 3.125rem; /* 50px — title ↔ Flavor */
-  padding-right: 3.125rem; /* close button 여백 */
+  margin-bottom: 3.125rem;
+  padding-right: 3.125rem;
   color: var(--color-primary-500);
-  font-size: var(--typo-h3-size); /* PC — H3 48px */
+  font-size: var(--typo-h3-size);
 }
 
 .collection-popup__section--pairing {
-  margin-top: 1.875rem; /* 30px — Flavor ↔ Pairing */
+  margin-top: 1.875rem;
 }
 
 .collection-popup__label {
-  margin-bottom: 1.25rem; /* 20px — label ↔ description */
+  margin-bottom: 1.25rem;
   color: var(--color-primary-500);
 }
 
@@ -430,14 +460,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 3.75rem; /* 60px — pairing ↔ tags */
+  margin-top: 3.75rem;
   padding: 0;
   list-style: none;
   flex-shrink: 0;
 }
 
 .collection-popup__tag {
-  padding: 0.625rem 1.25rem; /* 10px 20px */
+  padding: 0.625rem 1.25rem;
   color: var(--color-primary-500);
   background-color: #b89c7e;
   border-radius: 0.5rem; /* 8px */
@@ -445,8 +475,8 @@
 
 @media screen and (max-width: 64rem) {
   .popup.popup--collection {
-    width: min(43.5rem, calc(100vw - 2.5rem)); /* 696px */
-    height: min(19.375rem, calc(100vh - 2.5rem)); /* 310px */
+    width: min(43.5rem, calc(100vw - 2.5rem));
+    height: min(19.375rem, calc(100vh - 2.5rem));
     max-width: 43.5rem;
     max-height: 19.375rem;
   }
@@ -459,7 +489,7 @@
   .collection-popup__media {
     height: 100%;
     min-height: 0;
-    padding: 1.25rem; /* 20px */
+    padding: 1.25rem;
   }
 
   .collection-popup__img {
@@ -471,41 +501,41 @@
     grid-template-rows: auto auto auto;
     height: 100%;
     min-height: 0;
-    padding: 1.25rem; /* 20px */
+    padding: 1.25rem;
     overflow: hidden;
   }
 
   .collection-popup__title {
-    margin-bottom: 1.5625rem; /* 25px — title ↔ Flavor */
-    padding-right: 1.875rem; /* 30px — close button 여백 */
-    font-size: var(--typo-h5-size); /* H5 — Prata 24px */
+    margin-bottom: 1.5625rem;
+    padding-right: 1.875rem;
+    font-size: var(--typo-h5-size);
   }
 
   .collection-popup__section--pairing {
-    margin-top: 0.9375rem; /* 15px — Flavor ↔ Pairing */
+    margin-top: 0.9375rem;
   }
 
   .collection-popup__label {
-    margin-bottom: 0.625rem; /* 10px — label ↔ description */
+    margin-bottom: 0.625rem;
   }
 
   .collection-popup__tags {
-    margin-top: 1.875rem; /* 30px — Pairing ↔ tags */
+    margin-top: 1.875rem;
   }
 
   .collection-popup__tag {
-    padding: 0.625rem 0.3125rem; /* 10px 5px */
+    padding: 0.625rem 0.3125rem;
   }
 
   .collection-popup__close {
     top: 0;
     right: 0;
-    width: 1.875rem; /* 30px */
-    height: 1.875rem; /* 30px */
+    width: 1.875rem;
+    height: 1.875rem;
   }
 
   .collection-popup__close-icon {
-    font-size: 1.25rem; /* 20px */
+    font-size: 1.25rem;
   }
 }
 

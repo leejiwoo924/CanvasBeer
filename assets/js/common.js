@@ -70,8 +70,7 @@
         'brand.html': 'brand.html',
         'about.html': 'about.html',
         'collection.html': 'collection.html',
-        'contact.html': 'contact.html',
-        'art-to-beer.html': 'brand.html'
+        'contact.html': 'contact.html'
       };
       var activePage = pageMap[currentPage] || currentPage;
 

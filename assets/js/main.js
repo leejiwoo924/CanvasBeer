@@ -44,23 +44,24 @@
       var runSplitReveal = function () {
         gsap.context(function () {
           SplitText.create(target, {
-            type: 'lines, chars',
+            type: 'lines, words',
             autoSplit: true,
             aria: 'hidden',
-            charsClass: 'visual__char',
+            wordsClass: 'visual__word',
             onSplit: function (self) {
-              var charCount = self.chars.length;
+              var wordCount = self.words.length;
+
+              gsap.set(self.words, { color: 'rgba(255, 255, 255, 0.36)' });
 
               return gsap.timeline({
                 scrollTrigger: {
                   trigger: section,
-                  start: 'top 80%',
-                  end: '+=' + Math.max(charCount * 14, 400),
-                  scrub: 1
+                  start: 'top 75%',
+                  end: '+=' + Math.max(wordCount * 25, 280),
+                  scrub: 1.2
                 }
-              }).from(self.chars, {
-                opacity: 0,
-                y: 10,
+              }).to(self.words, {
+                color: '#ffffff',
                 stagger: {
                   each: 1,
                   from: 'start'

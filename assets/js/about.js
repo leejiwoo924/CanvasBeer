@@ -28,23 +28,24 @@
       var runSplitReveal = function () {
         gsap.context(function () {
           SplitText.create(target, {
-            type: 'lines, chars',
+            type: 'lines, words',
             autoSplit: true,
             aria: 'hidden',
-            charsClass: 'about-copy__char',
+            wordsClass: 'about-copy__word',
             onSplit: function (self) {
-              var charCount = self.chars.length;
+              var wordCount = self.words.length;
+
+              gsap.set(self.words, { color: 'rgba(12, 12, 12, 0.36)' });
 
               return gsap.timeline({
                 scrollTrigger: {
                   trigger: section,
-                  start: 'top 80%',
-                  end: '+=' + Math.max(charCount * 14, 400),
-                  scrub: 1
+                  start: 'top 75%',
+                  end: '+=' + Math.max(wordCount * 40, 450),
+                  scrub: 1.2
                 }
-              }).from(self.chars, {
-                opacity: 0,
-                y: 10,
+              }).to(self.words, {
+                color: '#0c0c0c',
                 stagger: {
                   each: 1,
                   from: 'start'
@@ -145,14 +146,61 @@
     },
 
     initCraftingSwiper: function () {
-      var el = document.querySelector('.about-crafting__swiper');
-      if (!el || typeof Swiper === 'undefined') return;
+      var section = document.querySelector('.about-crafting');
+      var mediaSwiperEl = section ? section.querySelector('.about-crafting__media-swiper') : null;
+      if (!section || !mediaSwiperEl || typeof Swiper === 'undefined') return;
 
-      var section = el.closest('.about-crafting');
-      if (!section) return;
-
+      var sources = section.querySelectorAll('.about-crafting__slide-source');
+      var contentEl = section.querySelector('.about-crafting__content');
+      var titleEl = section.querySelector('.about-crafting__content .about-crafting__slide-title');
+      var leadEl = section.querySelector('.about-crafting__content .about-crafting__slide-lead');
+      var descEl = section.querySelector('.about-crafting__content .about-crafting__slide-desc');
+      var fractionEl = section.querySelector('.about-crafting__fraction');
       var prevBtns = section.querySelectorAll('.about-crafting__arrow--prev');
       var nextBtns = section.querySelectorAll('.about-crafting__arrow--next');
+
+      if (!sources.length || !contentEl || !titleEl || !leadEl || !descEl || !fractionEl) return;
+
+      var slides = Array.prototype.map.call(sources, function (source) {
+        return {
+          title: source.querySelector('.about-crafting__slide-title').innerHTML,
+          lead: source.querySelector('.about-crafting__slide-lead').innerHTML,
+          desc: source.querySelector('.about-crafting__slide-desc').innerHTML
+        };
+      });
+
+      var updateContent = function (index, animate) {
+        var slide = slides[index];
+        if (!slide) return;
+
+        fractionEl.textContent = (index + 1) + ' / ' + slides.length;
+
+        var applyContent = function () {
+          titleEl.innerHTML = slide.title;
+          leadEl.innerHTML = slide.lead;
+          descEl.innerHTML = slide.desc;
+        };
+
+        if (!animate || typeof gsap === 'undefined') {
+          applyContent();
+          contentEl.style.opacity = '1';
+          return;
+        }
+
+        gsap.to(contentEl, {
+          opacity: 0,
+          duration: 0.2,
+          ease: 'power2.out',
+          onComplete: function () {
+            applyContent();
+            gsap.to(contentEl, {
+              opacity: 1,
+              duration: 0.3,
+              ease: 'power2.out'
+            });
+          }
+        });
+      };
 
       var updateNavState = function (swiper) {
         prevBtns.forEach(function (btn) {
@@ -163,26 +211,22 @@
         });
       };
 
-      new Swiper(el, {
+      new Swiper(mediaSwiperEl, {
         slidesPerView: 1,
         speed: 800,
         loop: false,
-        autoHeight: true,
         navigation: {
-          nextEl: '.about-crafting__arrow--next',
-          prevEl: '.about-crafting__arrow--prev'
+          nextEl: section.querySelector('.about-crafting__arrow--next'),
+          prevEl: section.querySelector('.about-crafting__arrow--prev')
         },
         on: {
           init: function (swiper) {
             updateNavState(swiper);
-            swiper.updateAutoHeight();
+            updateContent(swiper.activeIndex, false);
           },
           slideChange: function (swiper) {
             updateNavState(swiper);
-            swiper.updateAutoHeight();
-          },
-          resize: function (swiper) {
-            swiper.updateAutoHeight();
+            updateContent(swiper.activeIndex, true);
           }
         }
       });

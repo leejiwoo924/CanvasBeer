@@ -31,7 +31,7 @@
   left: 50%;
   z-index: var(--z-popup);
   width: calc(100% - 2rem);
-  max-width: 37.5rem; /* 600px */
+  max-width: 37.5rem;
   max-height: calc(100vh - 4rem);
   background-color: var(--color-white);
   border-radius: 0.5rem;
@@ -52,16 +52,16 @@
 
 /* Popup Sizes */
 .popup--sm {
-  max-width: 25rem; /* 400px */
+  max-width: 25rem;
 }
 
 .popup--lg {
-  max-width: 50rem; /* 800px */
+  max-width: 50rem;
 }
 
 .popup--full {
   width: calc(100% - 2rem);
-  max-width: 75rem; /* 1200px */
+  max-width: 75rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -164,7 +164,7 @@
    Image Popup (Main page notice)
    -------------------------------------------------------------------------- */
 .popup--image {
-  max-width: 31.25rem; /* 500px */
+  max-width: 31.25rem;
   background-color: transparent;
   border-radius: 0;
 }

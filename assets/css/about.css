@@ -3,7 +3,7 @@
    BEM Naming Convention | 1rem = 16px
    ========================================================================== */
 
-/* About Page — hero 제외 전체 배경 Primary 400, padding 없음 */
+/* About Page */
 #main-content > section:not(.about-hero):not(.about-copy):not(.about-inspiration):not(.about-cta) {
   background-color: var(--color-primary-400);
   padding: 0;
@@ -15,7 +15,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   About Hero Section — Brand hero와 동일 크기 (100vh, cover)
+   About Hero Section
    -------------------------------------------------------------------------- */
 .about-hero {
   position: relative;
@@ -51,7 +51,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Copy Section — Main Visual과 동일 SplitText 효과
+   Copy Section
    -------------------------------------------------------------------------- */
 .about-copy {
   width: 100%;
@@ -66,7 +66,7 @@
 
 .about-copy__content {
   width: 100%;
-  max-width: 56.25rem; /* 900px */
+  max-width: 56.25rem;
   text-align: center;
   color: var(--color-neutral-900);
 }
@@ -83,14 +83,15 @@
   margin-top: var(--spacing-sm);
 }
 
-.about-copy__split-target .about-copy__char {
+.about-copy__split-target .about-copy__word {
   display: inline-block;
-  will-change: transform, opacity;
+  color: rgba(12, 12, 12, 0.36);
+  will-change: color;
 }
 
 @media screen and (max-width: 64rem) {
   #main-content > section.about-copy {
-    padding-block: 12.5rem; /* 200px */
+    padding-block: 12.5rem;
   }
 
   .about-copy__content {
@@ -98,7 +99,7 @@
   }
 
   .about-copy__text p + p {
-    margin-top: 0.75rem; /* 12px */
+    margin-top: 0.75rem;
   }
 
   .about-inspiration {
@@ -112,12 +113,12 @@
   }
 
   .about-inspiration__desc {
-    margin-top: 1.5rem; /* 24px — title ↔ body */
+    margin-top: 1.5rem;
   }
 
   .about-ingredients__list {
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--grid-gap); /* 24px */
+    gap: var(--grid-gap);
     justify-items: center;
   }
 
@@ -136,7 +137,7 @@
 .about-inspiration {
   position: relative;
   width: 100%;
-  height: 45rem; /* 720px */
+  height: 45rem;
   overflow: hidden;
 }
 
@@ -165,7 +166,7 @@
 }
 
 .about-inspiration__desc {
-  margin-top: 2.5rem; /* 40px */
+  margin-top: 2.5rem;
   color: var(--color-neutral-50);
 }
 
@@ -173,11 +174,11 @@
    Selecting Ingredients Section
    -------------------------------------------------------------------------- */
 .about-ingredients__inner {
-  padding-block: 7.5rem; /* 120px */
+  padding-block: 7.5rem;
 }
 
 .about-ingredients__title {
-  margin-bottom: 4rem; /* 64px */
+  margin-bottom: 4rem;
   color: var(--color-neutral-900);
   text-align: center;
 }
@@ -185,7 +186,7 @@
 .about-ingredients__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--grid-gap); /* 20px */
+  gap: var(--grid-gap);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -203,19 +204,19 @@
 
 .about-ingredients__img {
   width: 100%;
-  max-width: 20rem; /* 320px */
+  max-width: 20rem;
   height: auto;
   object-fit: contain;
 }
 
 .about-ingredients__label {
-  margin-top: 2.5rem; /* 40px — image ↔ label */
+  margin-top: 2.5rem;
   color: var(--color-neutral-900);
   text-transform: uppercase;
 }
 
 .about-ingredients__desc {
-  margin-top: 0.625rem; /* 10px — label ↔ desc */
+  margin-top: 0.625rem;
   color: var(--color-neutral-900);
   word-break: keep-all;
 }
@@ -228,7 +229,7 @@
    Crafting Process Section
    -------------------------------------------------------------------------- */
 .about-crafting__header {
-  padding-block: 7.5rem 4rem; /* 120px 64px */
+  padding-block: 7.5rem 4rem;
 }
 
 .about-crafting__title {
@@ -236,7 +237,7 @@
 }
 
 .about-crafting__intro {
-  margin-top: 0.625rem; /* 10px — title ↔ intro */
+  margin-top: 0.625rem;
   color: var(--color-neutral-900);
   word-break: keep-all;
 }
@@ -248,12 +249,22 @@
 .about-crafting__slide-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  min-height: 45rem; /* 720px */
+  min-height: 45rem;
 }
 
 .about-crafting__media {
   min-width: 0;
   min-height: 45rem;
+  overflow: hidden;
+}
+
+.about-crafting__media-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.about-crafting__media-slide {
+  height: auto;
 }
 
 .about-crafting__img {
@@ -275,6 +286,10 @@
   width: 100%;
   padding: 7.5rem;
   color: var(--color-neutral-900);
+}
+
+.about-crafting__content {
+  width: 100%;
 }
 
 .about-crafting__slide-lead {
@@ -354,11 +369,6 @@
     height: auto;
   }
 
-  .about-crafting__swiper .swiper-slide {
-    height: auto;
-    min-height: 0;
-  }
-
   .about-crafting__slide-grid {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
@@ -389,29 +399,22 @@
     align-items: flex-start;
     height: 100%;
     width: 100%;
-    padding: 2rem; /* 32px */
+    padding: 2rem; 
     text-align: left;
     overflow: hidden;
   }
 
-  .about-crafting__slide-title {
-    font-family: var(--font-body);
-    font-size: var(--typo-body-02-size); /* 24px Bold */
-    font-weight: var(--font-weight-bold);
-    line-height: var(--typo-body-line-height);
-  }
-
   .about-crafting__slide-lead {
-    margin-top: 2.5rem; /* 40px — slide title ↔ lead */
+    margin-top: 2.5rem; 
   }
 
   .about-crafting__slide-desc {
-    margin-top: 0.3125rem; /* 5px — lead ↔ body */
+    margin-top: 0.3125rem;
   }
 
   .about-crafting__nav {
     position: static;
-    margin-top: 3.75rem; /* 60px — body ↔ pagination */
+    margin-top: 3.75rem;
     padding-top: 0;
   }
 
