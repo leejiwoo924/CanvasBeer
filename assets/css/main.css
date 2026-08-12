@@ -226,12 +226,16 @@
   width: 100%;
   overflow: hidden;
   background-color: var(--color-neutral-900);
+  display: flex;
+  justify-content: center;
 }
 
 .brand-video__inner {
   position: relative;
   width: 100%;
-  height: 75.75rem;
+  max-width: 120rem; /* 1920px */
+  height: 75.9375rem; /* 1215px */
+  margin-inline: auto;
 }
 
 .brand-video__media {
@@ -310,7 +314,7 @@
    Collection Preview Section
    -------------------------------------------------------------------------- */
 .collection-preview {
-  background-color: var(--color-primary-500);
+  background-color: #130B06;
   color: var(--color-neutral-50);
   padding-top: 6.25rem;
   padding-bottom: var(--spacing-3xl);

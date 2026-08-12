@@ -52,6 +52,7 @@
   /* Card — Prata */
   --typo-card-01-size: 2rem; /* Card01 — 32px */
   --typo-card-02-size: 0.875rem; /* Card02 — 14px */
+  --typo-card-03-size: 1rem; /* Card03 — 16px Medium */
 
   /* Email — Pretendard */
   --typo-email-01-size: 0.75rem; /* Email01 — 12px Light */
@@ -237,7 +238,7 @@
 
 /* --------------------------------------------------------------------------
    Card — Prata
-   Card01 32 | Card02 14
+   Card01 32 | Card02 14 | Card03 Medium 16
    -------------------------------------------------------------------------- */
 .typo--card-01 {
   /* Card01 — Prata 32 */
@@ -253,6 +254,14 @@
   font-size: var(--typo-card-02-size);
   font-weight: var(--font-weight-regular);
   line-height: var(--typo-title-line-height);
+}
+
+.typo--card-03 {
+  /* Card03 — Pretendard Medium 16 */
+  font-family: var(--font-body);
+  font-size: var(--typo-card-03-size);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--typo-body-line-height);
 }
 
 /* --------------------------------------------------------------------------
@@ -408,7 +417,7 @@
    Title01 40 | Title02 30 | H1 30 | H2 28 | H3 24 | H4 20 | H5 18 | H6 16
    Body01 Bold 20 | Body02 Bold 16 | Body03 Bold 15 | Body04 Medium 14 | Body05 Medium 18
    Body06 Regular 20 | Body07 Regular 18 | Body08 Regular 14 | Body09 Light 20 | Body10 Light 15 | Body11 Light 12 | Body12 Prata 30
-   Card01 20 | Card02 14 | Caption01 Light 14 | Caption02 Regular 12 | Caption03 Regular 16 | Caption04 Regular 18
+   Card01 20 | Card02 14 | Card03 Medium 16 | Caption01 Light 14 | Caption02 Regular 12 | Caption03 Regular 16 | Caption04 Regular 18
    Caption05 Light 14 | Caption06 Light 12 | Email01 Light 12
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 47.9375rem) {
@@ -451,9 +460,10 @@
     --typo-footer-01-size: 0.75rem;   /* 12px Light */
     --typo-email-01-size: 0.75rem;    /* 12px Light */
 
-    /* Card — Prata */
+    /* Card — Prata / Pretendard */
     --typo-card-01-size: 1.25rem;     /* 20px */
     --typo-card-02-size: 0.875rem;     /* 14px */
+    --typo-card-03-size: 1rem;        /* 16px Medium */
   }
 
   /* Mobile weight / family overrides */

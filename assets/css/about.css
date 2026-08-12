@@ -225,6 +225,102 @@
   display: block;
 }
 
+/* PC — Inspiration / Ingredients typography (original) */
+@media screen and (min-width: 64.0625rem) {
+  .about-inspiration__title {
+    font-family: var(--font-display);
+    font-size: var(--typo-h2-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--typo-heading-line-height);
+  }
+
+  .about-inspiration__desc {
+    font-family: var(--font-body);
+    font-size: var(--typo-caption-02-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--typo-caption-line-height);
+  }
+
+  .about-ingredients__title {
+    font-family: var(--font-display);
+    font-size: var(--typo-h2-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--typo-heading-line-height);
+  }
+
+  .about-ingredients__label {
+    font-family: var(--font-body);
+    font-size: var(--typo-body-04-size);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--typo-body-line-height);
+  }
+
+  .about-ingredients__desc {
+    font-family: var(--font-body);
+    font-size: var(--typo-caption-03-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--typo-caption-line-height);
+  }
+
+  .about-crafting__title {
+    font-family: var(--font-display);
+    font-size: var(--typo-h2-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--typo-heading-line-height);
+  }
+
+  .about-crafting__intro {
+    font-family: var(--font-body);
+    font-size: var(--typo-caption-02-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--typo-caption-line-height);
+  }
+
+  .about-crafting__slide-title {
+    font-family: var(--font-display);
+    font-size: var(--typo-card-01-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--typo-title-line-height);
+  }
+
+  .about-crafting__slide-lead {
+    font-family: var(--font-body);
+    font-size: var(--typo-body-04-size);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--typo-body-line-height);
+  }
+
+  .about-cta__text {
+    font-family: var(--font-body);
+    font-size: var(--typo-body-02-size);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--typo-body-line-height);
+  }
+}
+
+@media screen and (max-width: 47.9375rem) {
+  .about-ingredients__inner {
+    padding-block: var(--spacing-xl);
+  }
+
+  .about-ingredients__title {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .about-ingredients__list {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .about-ingredients__img {
+    max-width: 12.5rem; /* 200px */
+  }
+
+  .about-ingredients__label {
+    margin-top: 1.5rem;
+  }
+}
+
 /* --------------------------------------------------------------------------
    Crafting Process Section
    -------------------------------------------------------------------------- */
@@ -354,7 +450,7 @@
   text-align: center;
 }
 
-@media screen and (max-width: 64rem) {
+@media screen and (min-width: 48rem) and (max-width: 64rem) {
   .about-crafting__header {
     padding-block: var(--spacing-2xl) var(--spacing-xl); /* 64px 48px */
   }
@@ -426,6 +522,73 @@
     padding: 0;
     margin-bottom: 0;
     overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 47.9375rem) {
+  .about-crafting__header {
+    padding-block: var(--spacing-xl) var(--spacing-lg);
+    text-align: left;
+  }
+
+  .about-crafting__slider-wrap {
+    padding-inline: 0;
+    width: 100%;
+  }
+
+  .about-crafting__slide-grid {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .about-crafting__media {
+    order: 1;
+    aspect-ratio: auto;
+    min-height: 0;
+    width: 100%;
+  }
+
+  .about-crafting__media-swiper {
+    height: auto;
+  }
+
+  .about-crafting__media-slide {
+    height: auto;
+  }
+
+  .about-crafting__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+
+  .about-crafting__panel {
+    order: 2;
+    aspect-ratio: auto;
+    min-height: 0;
+    background-color: #fff;
+  }
+
+  .about-crafting__panel-inner {
+    height: auto;
+    padding: var(--spacing-lg) var(--container-margin-inline) var(--spacing-xl);
+    text-align: left;
+  }
+
+  .about-crafting__slide-lead {
+    margin-top: 1rem;
+  }
+
+  .about-crafting__slide-desc {
+    margin-top: 0.625rem;
+  }
+
+  .about-crafting__nav {
+    margin-top: var(--spacing-xl);
+    padding-top: 0;
   }
 }
 
