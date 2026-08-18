@@ -74,7 +74,6 @@
 .contact-channels__title {
   margin-top: 1.5rem;
   color: var(--color-primary-500);
-  font-size: var(--typo-card-01-size);
 }
 
 .contact-channels__desc {
@@ -84,7 +83,23 @@
   font-style: normal;
   color: var(--color-primary-500);
   word-break: keep-all;
-  font-size: var(--typo-caption-04-size);
+}
+
+/* PC — channels typography (Card01 / Caption04) */
+@media screen and (min-width: 64.0625rem) {
+  .contact-channels__title {
+    font-family: var(--font-display);
+    font-size: var(--typo-card-01-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--typo-title-line-height);
+  }
+
+  .contact-channels__desc {
+    font-family: var(--font-body);
+    font-size: var(--typo-caption-04-size);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--typo-caption-line-height);
+  }
 }
 
 .contact-channels__link {
@@ -288,11 +303,6 @@
 
   .contact-channels__title {
     margin-top: 0.625rem;
-    font-size: var(--typo-h5-size);
-  }
-
-  .contact-channels__desc {
-    font-size: var(--typo-caption-03-size);
   }
 
   .contact-us__grid {
@@ -351,7 +361,23 @@
   .contact-channels__list {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 3rem;
+  }
+
+  .contact-channels__item {
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-channels__desc {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-channels__desc p {
+    text-align: center;
   }
 
   .contact-channels__item:nth-child(n) {
