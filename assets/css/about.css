@@ -207,6 +207,14 @@
   max-width: 20rem;
   height: auto;
   object-fit: contain;
+  transform: scale(1);
+  transform-origin: center center;
+  transition: transform var(--transition-slow);
+}
+
+.about-ingredients__item:hover .about-ingredients__img,
+.about-ingredients__item:focus-within .about-ingredients__img {
+  transform: scale(1.08);
 }
 
 .about-ingredients__label {

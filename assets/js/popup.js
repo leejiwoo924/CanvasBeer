@@ -83,7 +83,12 @@
       var $autoPopup = $('.popup[data-auto-open="true"]');
       if (!$autoPopup.length) return;
 
-      if (this.shouldHideToday()) return;
+      var canHideToday = $autoPopup.find('.popup__checkbox').length > 0;
+      if (!canHideToday) {
+        localStorage.removeItem(this.storageKey);
+      } else if (this.shouldHideToday()) {
+        return;
+      }
 
       var self = this;
       setTimeout(function () {

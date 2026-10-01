@@ -2,8 +2,6 @@
  * Main Page JS
  * Dependencies: jQuery, GSAP, ScrollTrigger, ScrollSmoother, SplitText, common.js, popup.js
  */
-alert("개인 포토폴리오용 사이트입니다")
-
 
 (function ($) {
   'use strict';
